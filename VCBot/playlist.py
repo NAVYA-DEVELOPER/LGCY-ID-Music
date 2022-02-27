@@ -11,9 +11,9 @@ async def playlist(client, m: Message):
    if chat_id in QUEUE:
       chat_queue = get_queue(chat_id)
       if len(chat_queue)==1:
-         await m.reply(f"**🔥 THIS ONE:** \n[{chat_queue[0][0]}]({chat_queue[0][2]}) | `{chat_queue[0][3]}`", disable_web_page_preview=True)
+         await m.reply(f"**THIS ONE:** \n[{chat_queue[0][0]}]({chat_queue[0][2]}) | `{chat_queue[0][3]}`", disable_web_page_preview=True)
       else:
-         QUE = f"**🔥 THIS ONE:** \n[{chat_queue[0][0]}]({chat_queue[0][2]}) | `{chat_queue[0][3]}` \n\n**⏯ PLAYLIST:**"
+         QUE = f"**THIS ONE:** \n[{chat_queue[0][0]}]({chat_queue[0][2]}) | `{chat_queue[0][3]}` \n\n**⏯ PLAYLIST:**"
          l = len(chat_queue)
          for x in range (1, l):
             hmm = chat_queue[x][0]
