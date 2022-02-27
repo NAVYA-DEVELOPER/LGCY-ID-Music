@@ -31,8 +31,8 @@
 
 
 # Special Thanks
-- [Sunil](https://t.me/Sushil8xop)
-- [Group](https://t.me/Clan8Xofficial)
+- [Prince 🤴](https://t.me/ROCKSTAR_PRINCE_OP)
+- [Group](https://t.me/team_max_fighter)
 
 
 ### Support & Updates 
