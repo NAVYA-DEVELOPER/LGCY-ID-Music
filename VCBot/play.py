@@ -123,7 +123,7 @@ async def play(client, m: Message):
             query = m.text.split(None, 1)[1]
             search = ytsearch(query)
             if search==0:
-               await huehue.edit("`Found Nothing for the Given Query`")
+               await huehue.edit("**Found Nothing for the Given Query**")
             else:
                songname = search[0]
                url = search[1]
