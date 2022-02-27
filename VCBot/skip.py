@@ -5,7 +5,7 @@ from config import bot, call_py, HNDLR, contact_filter
 from VCBot.handlers import skip_current_song, skip_item
 from VCBot.queues import QUEUE, clear_queue
 
-@Client.on_message(contact_filter & filters.command(['skip'], prefixes=f"{HNDLR}"))
+@Client.on_message(contact_filter & filters.command(['skip', 'next'], prefixes=f"{HNDLR}"))
 async def skip(client, m: Message):
    chat_id = m.chat.id
    if len(m.command) < 2:
