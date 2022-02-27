@@ -35,7 +35,7 @@ async def skip(client, m: Message):
                   OP = OP + "\n" + f"**#{x}** - {hm}"
          await m.reply(OP)        
       
-@Client.on_message(contact_filter & filters.command(['end', 'stop'], prefixes=f"{HNDLR}"))
+@Client.on_message(contact_filter & filters.command(['end', 'stop', 'X'], prefixes=f"{HNDLR}"))
 async def stop(client, m: Message):
    chat_id = m.chat.id
    if chat_id in QUEUE:
