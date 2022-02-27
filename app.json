@@ -7,7 +7,7 @@
         "VCBot",
         "MusicPlayer"
     ],
-    "repository": "https://github.com/LgcyAlex/testing-id",
+    "repository": "https://github.com/LgcyAlex/LGCY-ID-Music",
     "env": {
         "SESSION": {
             "description": "Pyrogram String Session",
