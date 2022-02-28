@@ -42,7 +42,7 @@ async def stop(client, m: Message):
       try:
          await call_py.leave_group_call(chat_id)
          clear_queue(chat_id)
-         await m.reply("**Stopped Streaming ⏹️**")
+         await m.reply("**𝙏𝙃𝙀 𝙐𝙎𝙀𝙍𝘽𝙊𝙏 𝙃𝘼𝙎 𝘿𝙄𝙎𝘾𝙊𝙉𝙉𝙀𝘾𝙏𝙀𝘿 𝙁𝙍𝙊𝙈 𝙑𝙄𝘿𝙀𝙊 𝘾𝙃𝘼𝙏 🤗........**")
       except Exception as e:
          await m.reply(f"**ERROR** \n`{e}`")
    else:
