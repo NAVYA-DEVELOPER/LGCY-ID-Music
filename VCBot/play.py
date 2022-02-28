@@ -46,7 +46,7 @@ async def ytdl(link):
       return 0, stderr.decode()
 
 
-@Client.on_message(filters.command(['play', 'yt'], prefixes=f"{HNDLR}"))
+@Client.on_message(filters.command(['play', 'yt', 'bajaao'], prefixes=f"{HNDLR}"))
 async def play(client, m: Message):
  if GRPPLAY or (m.from_user and m.from_user.is_contact) or m.outgoing:
    replied = m.reply_to_message
@@ -79,7 +79,7 @@ async def play(client, m: Message):
                stream_type=StreamType().pulse_stream,
             )
             add_to_queue(chat_id, songname, dl, link, "Audio", 0)
-            await huehue.edit(f"**𝑺𝒕𝒂𝒓𝒕𝒆𝒅 𝑷𝒍𝒂𝒚𝒊𝒏𝒈...** \n**SONG** : [{songname}]({link}) \n\n\n\n[𝑮𝑹𝑶𝑼𝑷 𝑺𝑼𝑷𝑷𝑶𝑹𝑻](https://t.me/LGCY_OFFICIAL)    [𝑫𝑬𝑽𝑬𝑳𝑶𝑷𝑬𝑹](https://t.me/lgcyalex)", disable_web_page_preview=True)
+            await huehue.edit(f"**𝑺𝒕𝒂𝒓𝒕𝒆𝒅 𝑷𝒍𝒂𝒚𝒊𝒏𝒈...** \n**Title** : [{songname}]({link}) \n\n\n\n[𝑮𝑹𝑶𝑼𝑷 𝑺𝑼𝑷𝑷𝑶𝑹𝑻](https://t.me/LGCY_OFFICIAL)    [𝑫𝑬𝑽𝑬𝑳𝑶𝑷𝑬𝑹](https://t.me/lgcyalex)", disable_web_page_preview=True)
           except Exception as hmme:
             await huehue.edit(hmme)
       else:
@@ -111,7 +111,7 @@ async def play(client, m: Message):
                            stream_type=StreamType().pulse_stream,
                         )
                         add_to_queue(chat_id, songname, ytlink, url, "Audio", 0)
-                        await huehue.edit(f"**𝑺𝒕𝒂𝒓𝒕𝒆𝒅 𝑷𝒍𝒂𝒚𝒊𝒏𝒈...** \n**SONG** : [{songname}]({url}) \n\n\n\n[𝑮𝑹𝑶𝑼𝑷 𝑺𝑼𝑷𝑷𝑶𝑹𝑻](https://t.me/LGCY_OFFICIAL)    [𝑫𝑬𝑽𝑬𝑳𝑶𝑷𝑬𝑹](https://t.me/lgcyalex)", disable_web_page_preview=True)
+                        await huehue.edit(f"**𝑺𝒕𝒂𝒓𝒕𝒆𝒅 𝑷𝒍𝒂𝒚𝒊𝒏𝒈...** \n**Title** : [{songname}]({url}) \n\n\n\n[𝑮𝑹𝑶𝑼𝑷 𝑺𝑼𝑷𝑷𝑶𝑹𝑻](https://t.me/LGCY_OFFICIAL)    [𝑫𝑬𝑽𝑬𝑳𝑶𝑷𝑬𝑹](https://t.me/lgcyalex)", disable_web_page_preview=True)
                      except Exception as ep:
                         await huehue.edit(f"`{ep}`")
             
@@ -144,7 +144,7 @@ async def play(client, m: Message):
                            stream_type=StreamType().pulse_stream,
                         )
                         add_to_queue(chat_id, songname, ytlink, url, "Audio", 0)
-                        await huehue.edit(f"**𝑺𝒕𝒂𝒓𝒕𝒆𝒅 𝑷𝒍𝒂𝒚𝒊𝒏𝒈...** \n**SONG** : [{songname}]({url}) \n\n[𝑮𝑹𝑶𝑼𝑷 𝑺𝑼𝑷𝑷𝑶𝑹𝑻](https://t.me/LGCY_OFFICIAL)    [𝑫𝑬𝑽𝑬𝑳𝑶𝑷𝑬𝑹](https://t.me/lgcyalex)", disable_web_page_preview=True)
+                        await huehue.edit(f"**𝑺𝒕𝒂𝒓𝒕𝒆𝒅 𝑷𝒍𝒂𝒚𝒊𝒏𝒈...** \n**Title** : [{songname}]({url}) \n\n\n\n[𝑮𝑹𝑶𝑼𝑷 𝑺𝑼𝑷𝑷𝑶𝑹𝑻](https://t.me/LGCY_OFFICIAL)    [𝑫𝑬𝑽𝑬𝑳𝑶𝑷𝑬𝑹](https://t.me/lgcyalex)", disable_web_page_preview=True)
                      except Exception as ep:
                         await huehue.edit(f"`{ep}`")
 
@@ -183,6 +183,6 @@ async def stream(client, m: Message):
                   stream_type=StreamType().pulse_stream,
                )
                add_to_queue(chat_id, "Radio 📻", livelink, link, "Audio", 0)
-               await huehue.edit(f"𝑺𝒕𝒂𝒓𝒕𝒆𝒅 𝑷𝒍𝒂𝒚𝒊𝒏𝒈 **[Radio 📻]({link}) \n\n\n\n[𝑮𝑹𝑶𝑼𝑷 𝑺𝑼𝑷𝑷𝑶𝑹𝑻](https://t.me/LGCY_OFFICIAL)    [𝑫𝑬𝑽𝑬𝑳𝑶𝑷𝑬𝑹](https://t.me/lgcyalex)", disable_web_page_preview=True)
+               await huehue.edit(f"𝑺𝒕𝒂𝒓𝒕𝒆𝒅 𝑷𝒍𝒂𝒚𝒊𝒏𝒈... **[Radio 📻]({link}) \n\n\n\n[𝑮𝑹𝑶𝑼𝑷 𝑺𝑼𝑷𝑷𝑶𝑹𝑻](https://t.me/LGCY_OFFICIAL)    [𝑫𝑬𝑽𝑬𝑳𝑶𝑷𝑬𝑹](https://t.me/lgcyalex)", disable_web_page_preview=True)
             except Exception as ep:
                await huehue.edit(f"`{ep}`")
