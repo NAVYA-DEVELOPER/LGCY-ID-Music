@@ -11,13 +11,13 @@ async def skip(client, m: Message):
    if len(m.command) < 2:
       op = await skip_current_song(chat_id)
       if op==0:
-         await m.reply("**𝑵𝒐𝒕𝒉𝒊𝒏𝒈 𝒊𝒔 𝑷𝒍𝒂𝒚𝒊𝒏𝒈**")
+         await m.reply("**𝑵𝒐𝒕𝒉𝒊𝒏𝒈 𝒊𝒔 𝑺𝒕𝒓𝒆𝒂𝒎𝒊𝒏𝒈...**")
       elif op==1:
          await m.reply("𝑸𝒖𝒆𝒖𝒆 𝒊𝒔 𝑬𝒎𝒑𝒕𝒚, 𝑳𝒆𝒂𝒗𝒊𝒏𝒈 𝑽𝒐𝒊𝒄𝒆 𝑪𝒉𝒂𝒕...")
       elif op==2:
          await m.reply(f"**Some Error Occurred** \n`Clearing the Queues and Leaving the Voice Chat...`")
       else:
-         await m.reply(f"**Skipped ⏭** \n**🎧 Now Playing** - [{op[0]}]({op[1]}) | `{op[2]}`", disable_web_page_preview=True)
+         await m.reply(f"**Skipped ⏭** \n**Now Playing** - [{op[0]}]({op[1]}) | `{op[2]}`", disable_web_page_preview=True)
    else:
       skip = m.text.split(None, 1)[1]
       OP = "**Removed the following songs from Queue:-**"
@@ -46,7 +46,7 @@ async def stop(client, m: Message):
       except Exception as e:
          await m.reply(f"**ERROR** \n`{e}`")
    else:
-      await m.reply("𝑵𝒐𝒕𝒉𝒊𝒏𝒈 𝒊𝒔 𝑺𝒕𝒓𝒆𝒂𝒎𝒊𝒏𝒈")
+      await m.reply("𝑵𝒐𝒕𝒉𝒊𝒏𝒈 𝒊𝒔 𝑺𝒕𝒓𝒆𝒂𝒎𝒊𝒏𝒈...")
    
 @Client.on_message(contact_filter & filters.command(['pause', 'wait', 'ruko'], prefixes=f"{HNDLR}"))
 async def pause(client, m: Message):
@@ -58,7 +58,7 @@ async def pause(client, m: Message):
       except Exception as e:
          await m.reply(f"**ERROR** \n`{e}`")
    else:
-      await m.reply("𝑵𝒐𝒕𝒉𝒊𝒏𝒈 𝒊𝒔 𝑺𝒕𝒓𝒆𝒂𝒎𝒊𝒏𝒈")
+      await m.reply("𝑵𝒐𝒕𝒉𝒊𝒏𝒈 𝒊𝒔 𝑺𝒕𝒓𝒆𝒂𝒎𝒊𝒏𝒈...")
       
 @Client.on_message(contact_filter & filters.command(['resume', 'r', 'run' , 'chalo'], prefixes=f"{HNDLR}"))
 async def resume(client, m: Message):
@@ -70,4 +70,4 @@ async def resume(client, m: Message):
       except Exception as e:
          await m.reply(f"**ERROR** \n`{e}`")
    else:
-      await m.reply("𝑵𝒐𝒕𝒉𝒊𝒏𝒈 𝒊𝒔 𝑺𝒕𝒓𝒆𝒂𝒎𝒊𝒏𝒈")
+      await m.reply("𝑵𝒐𝒕𝒉𝒊𝒏𝒈 𝒊𝒔 𝑺𝒕𝒓𝒆𝒂𝒎𝒊𝒏𝒈...")
