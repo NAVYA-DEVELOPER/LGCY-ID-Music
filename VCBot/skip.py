@@ -5,13 +5,13 @@ from config import bot, call_py, HNDLR, contact_filter
 from VCBot.handlers import skip_current_song, skip_item
 from VCBot.queues import QUEUE, clear_queue
 
-@Client.on_message(contact_filter & filters.command(['skip', 'next'], prefixes=f"{HNDLR}"))
+@Client.on_message(contact_filter & filters.command(['skip', 'next', 'n'], prefixes=f"{HNDLR}"))
 async def skip(client, m: Message):
    chat_id = m.chat.id
    if len(m.command) < 2:
       op = await skip_current_song(chat_id)
       if op==0:
-         await m.reply("**Nothing Is Playing**")
+         await m.reply("**𝑵𝒐𝒕𝒉𝒊𝒏𝒈 𝒊𝒔 𝑷𝒍𝒂𝒚𝒊𝒏𝒈**")
       elif op==1:
          await m.reply("𝑸𝒖𝒆𝒖𝒆 𝒊𝒔 𝑬𝒎𝒑𝒕𝒚, 𝑳𝒆𝒂𝒗𝒊𝒏𝒈 𝑽𝒐𝒊𝒄𝒆 𝑪𝒉𝒂𝒕...")
       elif op==2:
@@ -35,7 +35,7 @@ async def skip(client, m: Message):
                   OP = OP + "\n" + f"**#{x}** - {hm}"
          await m.reply(OP)        
       
-@Client.on_message(contact_filter & filters.command(['end', 'stop', 'X'], prefixes=f"{HNDLR}"))
+@Client.on_message(contact_filter & filters.command(['end', 'stop', 'X', 'e'], prefixes=f"{HNDLR}"))
 async def stop(client, m: Message):
    chat_id = m.chat.id
    if chat_id in QUEUE:
@@ -48,7 +48,7 @@ async def stop(client, m: Message):
    else:
       await m.reply("𝑵𝒐𝒕𝒉𝒊𝒏𝒈 𝒊𝒔 𝑺𝒕𝒓𝒆𝒂𝒎𝒊𝒏𝒈")
    
-@Client.on_message(contact_filter & filters.command(['pause'], prefixes=f"{HNDLR}"))
+@Client.on_message(contact_filter & filters.command(['pause', 'wait', 'ruko'], prefixes=f"{HNDLR}"))
 async def pause(client, m: Message):
    chat_id = m.chat.id
    if chat_id in QUEUE:
@@ -60,7 +60,7 @@ async def pause(client, m: Message):
    else:
       await m.reply("𝑵𝒐𝒕𝒉𝒊𝒏𝒈 𝒊𝒔 𝑺𝒕𝒓𝒆𝒂𝒎𝒊𝒏𝒈")
       
-@Client.on_message(contact_filter & filters.command(['resume'], prefixes=f"{HNDLR}"))
+@Client.on_message(contact_filter & filters.command(['resume', 'r', 'run' , 'chalo'], prefixes=f"{HNDLR}"))
 async def resume(client, m: Message):
    chat_id = m.chat.id
    if chat_id in QUEUE:
